@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		99E5632B27C3367F0086C8EB /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99E5632A27C3367F0086C8EB /* main.swift */; };
+		99F3A4752937555F00E9830C /* step1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99F3A4742937555F00E9830C /* step1.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,7 @@
 /* Begin PBXFileReference section */
 		99E5632727C3367F0086C8EB /* Week3_ Test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "Week3_ Test"; sourceTree = BUILT_PRODUCTS_DIR; };
 		99E5632A27C3367F0086C8EB /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		99F3A4742937555F00E9830C /* step1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = step1.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				99E5632A27C3367F0086C8EB /* main.swift */,
+				99F3A4742937555F00E9830C /* step1.swift */,
 			);
 			path = "Week3_ Test";
 			sourceTree = "<group>";
@@ -90,7 +93,7 @@
 			attributes = {
 				BuildIndependentTargetsInParallel = 1;
 				LastSwiftUpdateCheck = 1320;
-				LastUpgradeCheck = 1320;
+				LastUpgradeCheck = 1410;
 				TargetAttributes = {
 					99E5632627C3367F0086C8EB = {
 						CreatedOnToolsVersion = 13.2.1;
@@ -121,6 +124,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				99E5632B27C3367F0086C8EB /* main.swift in Sources */,
+				99F3A4752937555F00E9830C /* step1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -161,6 +165,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
@@ -222,6 +227,7 @@
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
 				COPY_PHASE_STRIP = NO;
+				DEAD_CODE_STRIPPING = YES;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -245,7 +251,9 @@
 		99E5632F27C3367F0086C8EB /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};
@@ -254,7 +262,9 @@
 		99E5633027C3367F0086C8EB /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
+				DEAD_CODE_STRIPPING = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 			};

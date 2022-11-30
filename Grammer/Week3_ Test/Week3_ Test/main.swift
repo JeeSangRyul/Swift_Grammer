@@ -1,11 +1,3 @@
-import CoreGraphics
-////
-////  main.swift
-////  Week3_ Test
-////
-////  Created by 지상률 on 2022/02/21.
-////
-//
 import Foundation
 //
 /*
@@ -661,16 +653,30 @@ let misterLee : Person? = Person(name: "misterLee", age: 28, money: 10000) //Per
 let missKim : Person? = Person(name: "missKim", age: 26, money: 10000)
 
 //CoffeeShop 인스턴스 및 상속
-let yagombucks : CoffeeShop = CoffeeShop()//오늘 수입이 0원부터 시작하고, pickUpTable이 있는 yagombucks에 coffeshop타입을 할당해주었다.
+//let yagombucks : CoffeeShop = CoffeeShop()//오늘 수입이 0원부터 시작하고, pickUpTable이 있는 yagombucks에 coffeshop타입을 할당해주었다.
+//
+//yagombucks.showCoffeePrint(.Americano)//가격출력
+//yagombucks.barista = misterLee//바리스타 할당
+//yagombucks.customer = missKim//손님 할당
+//
+//
+//
+//missKim?.order(.Americano) //yagombucks의 매출이 올라간 모습까지 확인가능
+//missKim?.order(.Americano)
+//yagombucks.pickUpTable(ready: true )
 
-yagombucks.showCoffeePrint(.Americano)//가격출력
-yagombucks.barista = misterLee//바리스타 할당
-yagombucks.customer = missKim//손님 할당
 
 
 
-missKim?.order(.Americano) //yagombucks의 매출이 올라간 모습까지 확인가능
-missKim?.order(.Americano)
-yagombucks.pickUpTable(ready: true )
 
 
+let misterLeeA : Barista = Barista(name: "misterLee", age: 30)
+let missKimA : CustomerA = CustomerA(name: "missKim", age: 22)
+let yagombucksA : CoffeeShopA = CoffeeShopA(name: "yagombucks", revenue: 80000, pickUpTable: false, customer: missKimA, barista: misterLeeA)
+
+misterLeeA.cafe = yagombucksA
+missKimA.cafe = yagombucksA
+
+missKimA.cafe?.order(cafe: .Americano)
+missKimA.cafe?.order(cafe: .Americano)
+print("\(missKimA.money)")
