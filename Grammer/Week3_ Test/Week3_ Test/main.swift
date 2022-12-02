@@ -680,3 +680,4 @@ missKimA.cafe = yagombucksA
 missKimA.cafe?.order(cafe: .Americano)
 missKimA.cafe?.order(cafe: .Americano)
 print("\(missKimA.money)")
+//MARK: 다른 class의 method나 property에 접근하기위해서 그 클래스의 인스턴스를 만들어서 접근하는 방법이 있다.
