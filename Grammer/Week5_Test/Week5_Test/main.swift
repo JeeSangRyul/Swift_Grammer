@@ -337,6 +337,7 @@ var jina: Any = Person() // as Any 생략가능
 // 자식 클래스의 인스턴스로 사용할 수 있도록
 // 컴파일러에게 인스턴스의 타입정보를 전환해줍니다
 // MARK: **** 다운캐스팅은 항상 가능한 것이 아닌 업캐스팅한 것을 다시 다운캐스팅하는 경우에 사용하는 것 ****
+
 //MARK: 조건부 다운 캐스팅
 // as? - optional로 반환
 var optionalCasted: Student?
@@ -478,7 +479,7 @@ class Person {
 
     init() {
         self.name = "지상률"
-        self.height = 28
+        self.height = 178
     }
     init(name: String, height: Int){
         self.name = name
@@ -511,7 +512,8 @@ class TalentedPerson: Person, Talent {
         self.singing = singing
         self.dancing =  dancing
         self.acting = acting
-        super.init(name: name, height: height) //Designated Initializer에서 해당 클래스의 stored property를 모두 초기화해야
+        super.init(name: name, height: height)
+        //Designated Initializer에서 해당 클래스의 stored property를 모두 초기화해야
         //슈퍼클래스의 Designated Initializer를 호출할 수 있다.
     }
 }
@@ -684,7 +686,6 @@ public class MyClass{
  fileprivate: 파일 외부 비공개 접근 수준(파일 내부)
  private: 비공개 접근 수준(기능 정의 내부)
  
- 
  -public 키워드로 접근 수준이 지정된 요소는 어디서든 쓰일 수 있습니다. 자신이 구현된 소스 파일은 물론, 그 소스파일이 속해 있는 모듈, 그 모듈을 가져다 쓰는 모듈 등 모든 곳에서 사용할 수 있습니다.
  공개(Public) 접근 수준은 주로 프레임워크에서 외부와 연결될 인터페이스를 구현하는데 많이 쓰입니다. 우리가 사용하는 스위프트의 기본 요소는 모두 공개 접근 수준으로 구현 되어 있다고 생각하면 됩니다.
  
@@ -789,6 +790,7 @@ public class MyClass{
      public private(set) var publicGetOnlyStoredProperty: Int = 0
  //private(set)에 public을 붙인 이유는 외부 모듈에서도 이 class안에 있는 publicGetOnlyStoredProperty라는 변수를 읽기 위해서 이다. 만약 public을 적어주지 않는다면 internal로
  지정되어 외부 모듈에서 이 구조체 안에 publicGetOnlyStoredProperty을 읽을 수 없기때문이다.
+ //publicGetOnlyStoredProperty는 외부 모듈에서도 접근이 가능한 변수이지만 수정하기 위해서는 이 코드블럭 안에와서 수정해야한다는 의미이다.
  
      // 내부 접근 수준 연산 프로퍼티 internalComputedProperty
      internal var internalComputedProperty: Int {
