@@ -6,7 +6,4 @@
 -사이트: udemy(storyboard, without storyboard)
 *****
 ## :paperclip: DataStructure &amp; Algorithm
--교재: 스위프트 자료구조 알고리즘
-*****
-## :paperclip: 백준
--사이트: 백준
+-교재: 자료구조 알고리즘 (프로그래머스)
